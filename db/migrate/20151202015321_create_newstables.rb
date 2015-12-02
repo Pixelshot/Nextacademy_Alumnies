@@ -4,7 +4,7 @@ class CreateNewstables < ActiveRecord::Migration
       t.string :title
       t.string :body
       t.json :images
-      t.string :user_id
+      t.integer :user_id
 
       t.timestamps null: false
     end
