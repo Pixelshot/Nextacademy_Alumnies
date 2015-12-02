@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-resources :users
+root "statics#index"
+resources :users, only: [:edit]
+resources :sessions, only: [:new]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

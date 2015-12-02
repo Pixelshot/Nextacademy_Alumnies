@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151202020414) do
+ActiveRecord::Schema.define(version: 20151202015431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,44 +20,37 @@ ActiveRecord::Schema.define(version: 20151202020414) do
     t.string   "title"
     t.string   "body"
     t.json     "images"
-    t.string   "user_id"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.string   "user_id"
-    t.string   "session_email"
-    t.string   "password_digest"
-    t.string   "admin"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-  end
-
   create_table "testimonials", force: :cascade do |t|
     t.string   "text"
-    t.string   "user_id"
-    t.string   "poster_id"
+    t.integer  "user_id"
+    t.integer  "poster_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
-    t.string   "email"
+    t.string   "contact_email"
+    t.string   "login_email"
+    t.string   "password_digest"
     t.string   "fb"
     t.string   "linkedin"
     t.string   "twitter"
     t.string   "github"
-    t.integer  "batch_month"
-    t.integer  "batch_year"
+    t.string   "batch_month"
+    t.string   "batch_year"
     t.string   "projects_link"
     t.string   "description"
     t.string   "avatar"
     t.string   "status"
     t.string   "slack_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
