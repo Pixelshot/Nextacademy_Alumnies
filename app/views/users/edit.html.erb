@@ -3,41 +3,76 @@
 <%= form_for @user do |f| %>
 
 	<div> 
-		<%= f.label :party_name %>
-		<%= f.text_field :party_name %>
+		<%= f.label :username %>
+		<%= f.text_field :username %>
 	</div>
 
 	<div>
-		<%= f.label :location %>
-		<%= f.text_field :location %>
+		<%= f.label :status %>
+		<%= f.text_field :status %>
 	</div>
 
-  <div>
-		<%= f.label :price %>
-		<%= f.text_field :price %>
+	<div>
+		<%= f.label :batch_month %>
+		<%= f.text_field :batch_month %>
+	</div>
+
+	 <div>
+		<%= f.label :batch_year %>
+		<%= f.text_field :batch_year %>
+	</div>
+
+	<div>
+		<%= f.label :contact_email %>
+		<%= f.text_field :contact_email %>
+	</div>
+
+	<div>
+		<%= f.label :slack_id %>
+		<%= f.text_field :slack_id %>
+	</div>
+
+	<div>
+		<%= f.label :fb %>
+		<%= f.text_field :fb %>
+	</div>
+
+	<div>
+		<%= f.label :linkedin%>
+		<%= f.text_field :linkedin %>
+	</div>
+
+	<div>
+		<%= f.label :twitter %>
+		<%= f.text_field :twitter %>
+	</div> 
+
+	<div>
+		<%= f.label :github %>
+		<%= f.text_field :github %>
+	</div>
+
+	<div>
+		<%= f.label :projects_link %>
+		<%= f.text_area :projects_link %>
 	</div>
 
 	<div>
 		<%= f.label :description %>
-		<%= f.text_area :description %>
+		<%= f.text_area :description  %>
 	</div>
 
-	<div>
-		<%= f.label :theme%>
-		<%= f.text_field :theme %>
-	</div>
+	<h2>Your login email is <%= current_user.login_email %></h2>
 
 	<div>
-		<%= f.label :date %>
-		<%= f.date_field :date %>
-	</div> 
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
 
-	<div>
-		<%= f.label :time %>
-		<%= f.text_field :time %>
-	</div>
-
-<div><%=f.label :upload_profile_photo%><%= f.file_field :picture, multiple: true %></div>
+   <div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
 
   <span><%= f.submit "Submit"%></span>
-	</div>
+  <% end %>
