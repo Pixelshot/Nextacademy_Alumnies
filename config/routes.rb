@@ -7,7 +7,7 @@ get '/login', to: "sessions#new", as: "login"
 post '/login', to: "sessions#create"
 delete '/logout', to: "sessions#destroy", as: "logout"
 
-resources :users, only: [:index, :edit, :update]
+resources :users, only: [:index, :show, :edit, :update]
 resources :sessions, only: [:new]
 
   # The priority is based upon order of creation: first created -> highest priority.

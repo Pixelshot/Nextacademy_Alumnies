@@ -1,0 +1,32 @@
+<table class="table">
+<thead>
+
+<li><% if current_user.id == @user.id%><%= link_to "Edit Profile", edit_user_path%><%end%></li> 
+
+	<tr>
+		<th>Name</th>
+		<th>Status</th>
+		<th>Batch</th>
+		<th>Email</th>
+		<th>Slack ID</th>
+		<th>Facebook</th>
+		<th>Twitter</th>
+		<th>Linkedin</th>
+		<th>Projects</th>
+		<th>About Me</th>
+	</tr>
+</thead>
+
+<tbody>
+		<tr>
+			<td><p><%= @user.username %></p></td>
+ 			<td><p><%= @user.status %></p></td>
+ 			<td><p><%= @user.batch_month %>, <%= @user.batch_year %></p></td>
+ 			<td><p><%= @user.contact_email %></p></td>
+ 			<td><p><%= @user.slack_id %></p></td>
+ 			<td><p><%= @user.fb %></p></td>
+ 			<td><p><%= @user.twitter %></p></td>
+ 			<td><p><%= @user.linkedin %></p></td>
+ 			<td><p><%= @user.projects_link %></p></td>
+ 			<td><p><%= @user.description %></p></td>
+</tbody>
