@@ -9,7 +9,8 @@ delete '/logout', to: "sessions#destroy", as: "logout"
 
 resources :users, only: [:index, :edit, :update]
 resources :sessions, only: [:new]
-
+resources :newstables, only: [:index, :new, :show, :edit, :destroy]
+post '/newstables/new', to: "newstables#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

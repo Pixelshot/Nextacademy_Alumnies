@@ -1,0 +1,16 @@
+<h1>This is newsfeed index</h1>
+
+	<% @newstable.each_with_index do | t, index| %>
+<div>
+	<%= link_to t do %>
+	<%= "#{index+1}. #{t.title}" %>
+</div>
+<% end %>
+<% end %>
+
+<br>
+
+<div>
+	<%= link_to "Create newsfeed", new_newstable_path %>
+</div>
+
