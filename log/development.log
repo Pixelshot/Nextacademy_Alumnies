@@ -7055,3 +7055,311 @@ Processing by UsersController#show as HTML
   Rendered users/show.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.3ms)
 >>>>>>> 8939430220f0a90afdcc261025aafff03af64587
+
+
+Started GET "/" for ::1 at 2015-12-02 22:45:27 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (5.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 496ms (Views: 470.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 22:45:30 +0800
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/newstables" for ::1 at 2015-12-02 22:45:32 +0800
+Processing by NewstablesController#index as HTML
+  [1m[35mNewstable Load (0.6ms)[0m  SELECT "newstables".* FROM "newstables"
+  Rendered newstables/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 62ms (Views: 40.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for ::1 at 2015-12-02 22:45:34 +0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."admin" = $1  [["admin", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."admin" = $1[0m  [["admin", 0]]
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for ::1 at 2015-12-02 22:45:36 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 11:06:00 +0800
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (27.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 250ms (Views: 209.5ms | ActiveRecord: 27.8ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 11:06:02 +0800
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 87ms (Views: 85.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-03 11:06:02 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-03 11:06:02 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-03 11:06:02 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-03 11:06:02 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-03 11:06:02 +0800
+
+
+Started DELETE "/logout" for ::1 at 2015-12-03 11:06:04 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y2JmFAKPrlF68FfcIsm3zc1Y3gmW/+tupojPbmuwHHRa4LdQGAj9RyWBgA/Yz9AZEG7aHmbSb6UCWFyr4n9FUw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 11:06:04 +0800
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-12-03 11:06:05 +0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-12-03 11:06:08 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IGRlkg8yESMNYacQQt+5Mf/oT/QGKoKpyFa9up67NIQZ5rTWFbVCNVIQcMO42d7lIt5L4/YHBmJshi5/F3Rtow==", "session"=>{"email"=>"haroldso@defruit.com", "password"=>"[FILTERED]"}, "commit"=>"Login!"}
+  [1m[35mUser Load (17.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."login_email" = $1 LIMIT 1  [["login_email", "haroldso@defruit.com"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 11:06:08 +0800
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/newstables" for ::1 at 2015-12-03 11:06:10 +0800
+Processing by NewstablesController#index as HTML
+  [1m[35mNewstable Load (2.4ms)[0m  SELECT "newstables".* FROM "newstables"
+  Rendered newstables/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/newstables/2" for ::1 at 2015-12-03 11:06:12 +0800
+Processing by NewstablesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mNewstable Load (11.6ms)[0m  SELECT  "newstables".* FROM "newstables" WHERE "newstables"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered newstables/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 47ms (Views: 33.0ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/newstables/2/edit" for ::1 at 2015-12-03 11:06:13 +0800
+Processing by NewstablesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mNewstable Load (0.3ms)[0m  SELECT  "newstables".* FROM "newstables" WHERE "newstables"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered newstables/edit.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/newstables" for ::1 at 2015-12-03 11:06:16 +0800
+Processing by NewstablesController#index as HTML
+  [1m[35mNewstable Load (0.3ms)[0m  SELECT "newstables".* FROM "newstables"
+  Rendered newstables/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/newstables/new" for ::1 at 2015-12-03 11:06:17 +0800
+Processing by NewstablesController#new as HTML
+  Rendered newstables/new.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/newstables/new" for ::1 at 2015-12-03 11:06:25 +0800
+Processing by NewstablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LHe+162B0qZ9KKxnEjsnHrWL/gmnO6F6U8aTVZj98ZgV9W+TtwaBsCJZe7ToPUDKaL36HlcWJbH3FgCQETKovw==", "newstable"=>{"title"=>"124124", "body"=>"124124", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f7f78466398 @tempfile=#<Tempfile:/var/folders/bz/tnd8vzf93z12zx72v045jkv80000gn/T/RackMultipart20151203-43581-7t6e84.jpeg>, @original_filename="scenery.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"newstable[images][]\"; filename=\"scenery.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create Listing"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `current_user' for #<NewstablesController:0x007f7f78466eb0>):
+  app/controllers/newstables_controller.rb:11:in `create'
+
+
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.7ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f7f7348e730 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f7f7348d998 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f7f739391b8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/newstables/new" for ::1 at 2015-12-03 11:20:47 +0800
+Processing by NewstablesController#new as HTML
+  Rendered newstables/new.html.erb within layouts/application (25.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 144ms (Views: 134.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-03 11:20:47 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-03 11:20:47 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-03 11:20:47 +0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-03 11:20:47 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-03 11:20:47 +0800
+
+
+Started POST "/newstables/new" for ::1 at 2015-12-03 11:21:03 +0800
+Processing by NewstablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5l1PxVhj1ao0Phk0rrRamce84MfUklJEcQ0l1TmzJ1KG6R7D+bcQPehL7covLa+uij3lO9/zYK1FKdS3SmVug==", "newstable"=>{"title"=>"asdasd", "body"=>"asdasd", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f7f753124b8 @tempfile=#<Tempfile:/var/folders/bz/tnd8vzf93z12zx72v045jkv80000gn/T/RackMultipart20151203-43581-1qkz0r9.jpeg>, @original_filename="scenery2.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"newstable[images][]\"; filename=\"scenery2.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create Listing"}
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `current_user' for #<NewstablesController:0x007f7f75312ff8>):
+  app/controllers/newstables_controller.rb:11:in `create'
+
+
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.8ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.0ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f7f7348e730 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f7f7348d998 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f7f739391b8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/newstables/new" for ::1 at 2015-12-03 11:21:38 +0800
+Processing by NewstablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5l1PxVhj1ao0Phk0rrRamce84MfUklJEcQ0l1TmzJ1KG6R7D+bcQPehL7covLa+uij3lO9/zYK1FKdS3SmVug==", "newstable"=>{"title"=>"asdasd", "body"=>"asdasd", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f7f76fd2530 @tempfile=#<Tempfile:/var/folders/bz/tnd8vzf93z12zx72v045jkv80000gn/T/RackMultipart20151203-43581-jjju0l.jpeg>, @original_filename="scenery2.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"newstable[images][]\"; filename=\"scenery2.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create Listing"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 116663ms (ActiveRecord: 59.6ms)
+
+NameError (undefined local variable or method `current_user' for #<NewstablesController:0x007f7f76fe29f8>):
+  app/controllers/newstables_controller.rb:12:in `create'
+
+
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.5ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f7f7348e730 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f7f7348d998 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f7f739391b8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started POST "/newstables/new" for ::1 at 2015-12-03 11:23:51 +0800
+Processing by NewstablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5l1PxVhj1ao0Phk0rrRamce84MfUklJEcQ0l1TmzJ1KG6R7D+bcQPehL7covLa+uij3lO9/zYK1FKdS3SmVug==", "newstable"=>{"title"=>"asdasd", "body"=>"asdasd", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f7f78116260 @tempfile=#<Tempfile:/var/folders/bz/tnd8vzf93z12zx72v045jkv80000gn/T/RackMultipart20151203-43581-12gb121.jpeg>, @original_filename="scenery2.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"newstable[images][]\"; filename=\"scenery2.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create Listing"}
+Completed 500 Internal Server Error in 301599ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `current_user' for #<NewstablesController:0x007f7f78116da0>):
+  app/controllers/newstables_controller.rb:12:in `create'
+
+
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/harold/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.7ms)
+Cannot render console with content type multipart/form-dataAllowed content types: [#<Mime::Type:0x007f7f7348e730 @synonyms=["application/xhtml+xml"], @symbol=:html, @string="text/html">, #<Mime::Type:0x007f7f7348d998 @synonyms=[], @symbol=:text, @string="text/plain">, #<Mime::Type:0x007f7f739391b8 @synonyms=[], @symbol=:url_encoded_form, @string="application/x-www-form-urlencoded">]
+
+
+Started GET "/newstables" for ::1 at 2015-12-03 11:28:53 +0800
+Processing by NewstablesController#index as HTML
+  [1m[36mNewstable Load (1.1ms)[0m  [1mSELECT "newstables".* FROM "newstables"[0m
+  Rendered newstables/index.html.erb within layouts/application (23.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 147ms (Views: 115.6ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/newstables/2" for ::1 at 2015-12-03 11:28:53 +0800
+Processing by NewstablesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNewstable Load (0.8ms)[0m  [1mSELECT  "newstables".* FROM "newstables" WHERE "newstables"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered newstables/show.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/newstables/2" for ::1 at 2015-12-03 11:28:53 +0800
+Processing by NewstablesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mNewstable Load (0.3ms)[0m  [1mSELECT  "newstables".* FROM "newstables" WHERE "newstables"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered newstables/show.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-03 11:28:54 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-03 11:28:54 +0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-03 11:28:54 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-03 11:28:54 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-03 11:28:54 +0800
+
+
+Started GET "/newstables" for ::1 at 2015-12-03 11:28:58 +0800
+Processing by NewstablesController#index as HTML
+  [1m[36mNewstable Load (0.3ms)[0m  [1mSELECT "newstables".* FROM "newstables"[0m
+  Rendered newstables/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/newstables/new" for ::1 at 2015-12-03 11:28:59 +0800
+Processing by NewstablesController#new as HTML
+  Rendered newstables/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/newstables/new" for ::1 at 2015-12-03 11:29:09 +0800
+Processing by NewstablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d3qgokos0iavuZssC7uXT1J54Fl59RRSoSh/X8ut6rpO+HHmUKuBMPDITP/xvfCbj0/kTonYkJkF+OyaQmKznQ==", "newstable"=>{"title"=>"asdasd", "body"=>"asdasd", "images"=>[#<ActionDispatch::Http::UploadedFile:0x007f7f73ecea10 @tempfile=#<Tempfile:/var/folders/bz/tnd8vzf93z12zx72v045jkv80000gn/T/RackMultipart20151203-43581-19jqxg6.jpeg>, @original_filename="scenery2.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"newstable[images][]\"; filename=\"scenery2.jpeg\"\r\nContent-Type: image/jpeg\r\n">]}, "commit"=>"Create Listing"}
+  [1m[35mUser Load (5.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (17.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "newstables" ("title", "body", "images", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["title", "asdasd"], ["body", "asdasd"], ["images", "[\"scenery2.jpeg\"]"], ["user_id", 2], ["created_at", "2015-12-03 03:29:19.440527"], ["updated_at", "2015-12-03 03:29:19.440527"]]
+  [1m[36m (13.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/newstables
+Completed 302 Found in 10164ms (ActiveRecord: 42.4ms)
+
+
+Started GET "/newstables" for ::1 at 2015-12-03 11:29:19 +0800
+Processing by NewstablesController#index as HTML
+  [1m[35mNewstable Load (0.3ms)[0m  SELECT "newstables".* FROM "newstables"
+  Rendered newstables/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.6ms)

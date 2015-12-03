@@ -8,6 +8,7 @@ class NewstablesController < ApplicationController
 	end
 
 	def create
+		byebug
 		@newstable = current_user.newstables.new(newstable_params)
 		if @newstable.save
 			redirect_to newstables_path
