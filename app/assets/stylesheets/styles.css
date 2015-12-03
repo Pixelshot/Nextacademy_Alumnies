@@ -514,7 +514,7 @@ Buttons
 /* ==========================================================================
 Navigation
 ========================================================================== */
-.nav-toggle {
+/*.nav-toggle {
     position: absolute;
     top: 0;
     right: 15px;
@@ -574,7 +574,7 @@ Navigation
     top: 59px;
     right: 143px;
 }
-
+*/
 /* ==========================================================================
 Hero
 ========================================================================== */
@@ -777,7 +777,7 @@ blockquote .logo-quote {
 Showcase
 ========================================================================== */
 .showcase {
-    background: url('../assets/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
+    background: url();('../assets/showcase-bg-fixed-01.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 .showcase h1 {
