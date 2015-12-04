@@ -18,15 +18,39 @@
 </thead>
 
 <tbody>
-		<tr>
-			<td><p><%= @user.username %></p></td>
- 			<td><p><%= @user.status %></p></td>
- 			<td><p><%= @user.batch_month %>, <%= @user.batch_year %></p></td>
- 			<td><p><%= @user.contact_email %></p></td>
- 			<td><p><%= @user.slack_id %></p></td>
- 			<td><p><%= @user.fb %></p></td>
- 			<td><p><%= @user.twitter %></p></td>
- 			<td><p><%= @user.linkedin %></p></td>
- 			<td><p><%= @user.projects_link %></p></td>
- 			<td><p><%= @user.description %></p></td>
+	<tr>
+		<td><%= @user.username %></td>
+		<td><%= @user.status %></td>
+		<td><%= @user.batch_month %>, <%= @user.batch_year %></td>
+		<td><%= @user.contact_email %></td>
+		<td><%= @user.slack_id %></td>
+		<td><%= @user.fb %></td>
+		<td><%= @user.twitter %></td>
+		<td><%= @user.linkedin %></td>
+		<td><%= @user.projects_link %></td>
+		<td><%= @user.description %></td>
+	</tr>
 </tbody>
+</table>
+	
+	<h1> Testimonial </h1>
+
+<% unless current_user == @user %>
+	<%= form_for :testimonial, url: user_testimonials_path(@user.id) do |f| %>
+			<div>
+				<%= f.label :text %>
+				<%= f.text_area :text  %>
+			</div>
+	  	<span>
+	  		<%= f.submit "Submit"%>
+	  	</span>
+  	<% end %>
+<% end %>
+
+<% @user_testimonials.each do |test| %>
+	<p><%= test.text %> | <%= User.find(test.poster_id).username %>
+		<% unless current_user == @user%>
+			<span><%= link_to "Delete", test, method: :delete %></span></p>
+			<span><%= link_to "Edit", edit_testimonial_path(test.id) %></span></p>
+			<% end %>
+<% end %>

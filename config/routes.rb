@@ -7,10 +7,13 @@ get '/login', to: "sessions#new", as: "login"
 post '/login', to: "sessions#create"
 delete '/logout', to: "sessions#destroy", as: "logout"
 
-resources :users, only: [:index, :show, :edit, :update]
+resources :users, only: [:index, :show, :edit, :update], shallow: true do
+  resources :testimonials, only: [:create, :new, :destroy, :edit, :update]
+end
 resources :sessions, only: [:new]
 resources :newstables, only: [:index, :new, :show, :edit, :destroy]
-post '/newstables/new', to: "newstables#create"
+
+post '/testimonials/:id/edit', to: 'testimonials#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
