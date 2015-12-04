@@ -47464,3 +47464,184 @@ Started GET "/assets/features-intro-01.jpg" for ::1 at 2015-12-04 10:38:13 +0800
 
 
 Started GET "/assets/iphone-skeleton.png" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/" for ::1 at 2015-12-04 10:47:13 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (156.2ms)
+Completed 200 OK in 568ms (Views: 556.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animate.self-e693f70fafc41f2c173212df1e5a5286a986472330a1eeabbf30e76a80742f1b.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/jquery.fancybox.self-be0a69be320ccea9109a08a8207c98f417c6e5b25204435c00b076606b7de175.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/flickity.self-fa78e422fa30ef4a3535a816a862be070d9018ec86ba4250cc898ccdf6aa1f6d.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/lightbox.self-9d2709b495531bdc450ec15093a36d51a55ba954fd3ed56573a749e9cec688d4.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/queries.self-ed638cdf84bf12afcf717197d0e4b709e470e5c9514b1b9f62f66d7ead538c26.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap.min.self-c8d5c942f6af1547ec3198e764a26c0e10a419ba76d33169ed41ba46e79115ce.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/styles.self-530146cbcf309ffd01652a647891b6a9f8ade587b32545656a6ee1507b1ddf4a.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/application.self-4ebb68cda1668fe46bc714ec2ff5a43099d50ce615c1fd3f0bd26aa558dad487.css?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/alert.self-896ab026e6823f5cef2441e07dac53d0692a5b772ac58b1ce20aa624c342d3f4.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/affix.self-f7aef9d98ee5ece34a6a92a6a15bba777d93e8d908b75c95a85088277f394200.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/button.self-d19f3e2bcd3a7a4d75c11b9141b3fabd2c11987da1e99c85548ec3ecf8db30c3.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/carousel.self-b2e5e14483e6c31343a83861b7d487620f143d6fc2d07d5ae7544b6b225ba6be.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/collapse.self-93820e9b486e375a7fb4477602def3a6f8381fa6d50938d5378297ffbe4a1248.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/tab.self-9b77df34cbbb08ec93a806d6cdb741f04e3dbf3389978a0679146f2d2987bc89.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/dropdown.self-30536ae4d54b2685c26b5787ed0eb549a9075717fe690cce6270873bedf2df00.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/transition.self-9616c4e856b57659b67da3c6f2adcd584b5601ef4bebcdadab8ebb387d80bb25.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/scrollspy.self-c5c6ed008955656d345067e9821d79f1216b8383134d08465d4aa1a33a2b93b4.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/modal.self-bcfe54f3132bf16a8c5ce4289e47eba488f6522a08f49f378a037061c6c7aa4c.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/tooltip.self-3aa41fbe871573b34e0ebddf31598cd5a11a9841ca85f90934ea46326e46626d.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap/popover.self-b73e9c9111d01148e24bbc46e096782e024dc5db630e7078cf11ed2587ef8551.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/bootstrap.min.self-62f1594da76560472064bb913b117c6e0d2b1a3ac57b211d1313da3f1f3c1fd7.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/flickity.pkgd.min.self-07bc10c76224d36e16d5144d4c1dcb29c45fef802ef248d9777637a92fd5a3e0.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/jquery.fancybox.pack.self-6b1ee413f3f0bee70b292c97973eb1d2eeeed04e6ee2a977997b8e5d9ef004c3.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/jquery.fitvids.self-009dfb6afab730e0c79a08bc3a2eb30ba75b887db55d3597b52ff2abb1ae3e32.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/min/scripts-min.self-d60a1c8b96ab87db714c86398d990eb1d1d298f127891e0d70245b2831f1df64.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/min/toucheffects-min.self-673ccf0ba98ab74cef23d6fe3402a847101cbfa06aa2ed044da870b621167bb0.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/modernizr-2.6.2.min.self-d11431eff7ef26ba51c7b399010b1529d0b66b42a2ec03d027e7965848e88e0a.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/modernizr.custom.self-4ba57823d14b247de2a0190199e4ee1dec32ae9c69f9321b32b10b0caada8503.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/retina.self-876267fddd2699a86b9ca05240861f63324e5c398b245844c8d1b28c77d6aee0.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/scripts.self-463d6b22855577e249cebc689b3333a85cb1530dc323f16ff08ccf5ac2114e6b.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/toucheffects.self-20efd56064b667269a18626446aa146d267f19d085b3da013e513aa94124dd7a.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/waypoints.min.self-2bc4ab2bb3c68d3e658295b2d181d35b3bbf08e395120ce48c0439af20079937.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/html5-logo.png" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/screen1-9cbee6cd268d940698a44958fc702bdfe048f1386fcfa49e54df9da395342d3c.jpg" for ::1 at 2015-12-04 10:47:14 +0800
+
+
+Started GET "/assets/codrops-logo.png" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/screen2-f50fe7a09888b3c37dd63e885a37c479f8f8eb95b84e808fcf377fe0fff8c5c2.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/01-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/avatar.png" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/grid.png" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/teamwork_01.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/02-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/03-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/05-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/04-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/06-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/07-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/08-screenshot.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/logo-blue.png" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/features-intro-01.jpg" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/styles.self-530146cbcf309ffd01652a647891b6a9f8ade587b32545656a6ee1507b1ddf4a.css?body=1" for ::1 at 2015-12-04 10:47:15 +0800
+
+
+Started GET "/assets/iphone-skeleton.png" for ::1 at 2015-12-04 10:47:15 +0800
