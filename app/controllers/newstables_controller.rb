@@ -1,6 +1,6 @@
 class NewstablesController < ApplicationController
 before_action :set_newstable, only: [:show, :edit, :update, :destroy]
-
+before_action :check_correct_user, only: [:update, :edit, :destroy]
 	def index
 		@newstable = Newstable.all
 	end
@@ -50,6 +50,13 @@ before_action :set_newstable, only: [:show, :edit, :update, :destroy]
 
     def set_newstable
       @newstables = Newstable.find(params[:id])
+    end
+
+    def check_correct_user
+    	unless @newstables.user == user_admin?
+    		flash[:warning] = "Unauthorized"
+    		redirect_to newstables_path
+    	end
     end
 
 end
