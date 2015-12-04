@@ -11,6 +11,7 @@ resources :users, only: [:index, :show, :edit, :update]
 resources :sessions, only: [:new]
 resources :newstables, only: [:index, :new, :show, :edit, :destroy]
 post '/newstables/new', to: "newstables#create"
+post "/newstables/:id/edit", to: 'newstables#update'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -24,7 +25,7 @@ post '/newstables/new', to: "newstables#create"
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+  #   resources 
 
   # Example resource route with options:
   #   resources :products do
