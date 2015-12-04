@@ -47403,3 +47403,64 @@ Started GET "/assets/features-intro-01.jpg" for ::1 at 2015-12-04 10:32:39 +0800
 
 
 Started GET "/assets/iphone-skeleton.png" for ::1 at 2015-12-04 10:32:39 +0800
+
+
+Started GET "/" for ::1 at 2015-12-04 10:38:12 +0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticsController#index as HTML
+  Rendered statics/index.html.erb within layouts/application (185.0ms)
+Completed 200 OK in 501ms (Views: 482.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/bootstrap" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/html5-logo.png" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/02-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/03-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/avatar.png" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/codrops-logo.png" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/01-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/04-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/05-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/06-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/07-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/08-screenshot.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/logo-blue.png" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/grid.png" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/teamwork_01.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/features-intro-01.jpg" for ::1 at 2015-12-04 10:38:13 +0800
+
+
+Started GET "/assets/iphone-skeleton.png" for ::1 at 2015-12-04 10:38:13 +0800
