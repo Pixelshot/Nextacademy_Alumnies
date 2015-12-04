@@ -1,0 +1,22 @@
+<h1><%= @newstables.title %></h1>
+
+<h2><%= @newstables.body %></h2>
+
+<div>
+	<% @newstables.images.each do |image| %>
+  <%= image_tag image.url.to_s if image.url.present? %>
+  <% end %>
+</div>
+
+<div>
+<%=	link_to "Delete this post", newstable_path(@newstables), method: :delete %>
+</div>
+
+<div>
+<%=	link_to "Edit this post", edit_newstable_path %>
+</div>
+
+<div>
+<%= link_to "Back", newstables_path %>
+</div>
+

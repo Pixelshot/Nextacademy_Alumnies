@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
 
 root "statics#index"
-resources :users, only: [:edit]
+
+# resources :users, only: [:edit]
+get '/login', to: "sessions#new", as: "login"
+post '/login', to: "sessions#create"
+delete '/logout', to: "sessions#destroy", as: "logout"
+
+resources :users, only: [:index, :show, :edit, :update]
 resources :sessions, only: [:new]
+resources :newstables, only: [:index, :new, :show, :edit, :destroy]
+post '/newstables/new', to: "newstables#create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

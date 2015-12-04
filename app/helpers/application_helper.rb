@@ -8,4 +8,7 @@ module ApplicationHelper
 		current_user.present?
 	end
 
+	def user_admin?
+		current_user.admin == 1
+	end
 end
