@@ -8,15 +8,29 @@
   <% end %>
 </div>
 
+<p>
+	Created by: <%= @newstables.user.username %>, By <%= @newstables.created_at %> <br>
+	Updated at: <%= @newstables.updated_at %>
+</p>
+
+
+<% if user_admin? || @newstables.user == current_user %>
 <div>
-<%=	link_to "Delete this post", newstable_path(@newstables), method: :delete %>
+	<%=	link_to "Delete this post", newstable_path(@newstables), method: :delete %>
 </div>
 
 <div>
-<%=	link_to "Edit this post", edit_newstable_path(@newstables) %>
+	<%=	link_to "Edit this post", edit_newstable_path(@newstables) %>
 </div>
 
 <div>
-<%= link_to "Back", newstables_path(@newstables) %>
+	<%= link_to "Back", newstables_path(@newstables) %>
 </div>
 
+<% else %>
+
+<div>
+	<%= link_to "Back", newstables_path(@newstables) %>
+</div>
+
+<% end %>
