@@ -1,4 +1,5 @@
 class NewstablesController < ApplicationController
+before_action :set_newstable, only: [:show, :edit, :update, :destroy]
 
 	def index
 		@newstable = Newstable.all
@@ -10,6 +11,8 @@ class NewstablesController < ApplicationController
 	def create
 		@newstable = current_user.newstables.new(newstable_params)
 		if @newstable.save
+			# NotifyMailer.news_email(@newstable).deliver_now
+			NewsJob.perform_later(@newstable.id)
 			redirect_to newstables_path
 			flash[:Notice] = "Newsfeed successfully created"
 		else
@@ -19,15 +22,20 @@ class NewstablesController < ApplicationController
 	end
 
 	def show 
-		set_newstable
 	end
 
 	def edit
-		set_newstable
+	end
+
+	def update
+		if @newstables.update(newstable_params)
+			redirect_to @newstables
+		else
+			render :edit
+		end
 	end
 
 	def destroy
-		set_newstable
 		@newstables.destroy
 		redirect_to newstables_path
 	end
