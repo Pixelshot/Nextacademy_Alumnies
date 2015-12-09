@@ -7,9 +7,13 @@ get '/login', to: "sessions#new", as: "login"
 post '/login', to: "sessions#create"
 delete '/logout', to: "sessions#destroy", as: "logout"
 
-resources :users, only: [:index, :show, :edit, :update]
+resources :users, only: [:index, :show, :edit, :update], shallow: true do
+  resources :testimonials, only: [:create, :new, :destroy, :edit, :update]
+end
 resources :sessions, only: [:new]
 resources :newstables, only: [:index, :new, :show, :edit, :destroy]
+
+post '/testimonials/:id/edit', to: 'testimonials#update'
 post '/newstables/new', to: "newstables#create"
 post "/newstables/:id/edit", to: 'newstables#update'
   # The priority is based upon order of creation: first created -> highest priority.
@@ -25,7 +29,7 @@ post "/newstables/:id/edit", to: 'newstables#update'
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources 
+  #   resources
 
   # Example resource route with options:
   #   resources :products do

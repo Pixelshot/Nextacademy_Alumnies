@@ -8,6 +8,7 @@ before_action :set_user, only: [:show, :edit, :update]
 
 	def show
 		@user = User.find(params[:id])
+		@user_testimonials = Testimonial.where(user_id: @user.id)
 	end
 
 	def edit
