@@ -2,69 +2,69 @@
 
 <%= form_for @user do |f| %>
 
-	<div> 
-		<%= f.label :username %>
-		<%= f.text_field :username %>
-	</div>
+  <div>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </div>
 
-	<div>
-		<%= f.label :status %>
-		<%= f.text_field :status %>
-	</div>
+  <div>
+    <%= f.label :status %>
+    <%= f.text_field :status %>
+  </div>
 
-	<div>
-		<%= f.label :batch_month %>
-		<%= f.text_field :batch_month %>
-	</div>
+  <div>
+    <%= f.label :batch_month %>
+    <%= f.text_field :batch_month %>
+  </div>
 
-	<div>
-		<%= f.label :batch_year %>
-		<%= f.text_field :batch_year %>
-	</div>
+  <div>
+    <%= f.label :batch_year %>
+    <%= f.text_field :batch_year %>
+  </div>
 
-	<div>
-		<%= f.label :contact_email %>
-		<%= f.text_field :contact_email %>
-	</div>
+  <div>
+    <%= f.label :contact_email %>
+    <%= f.text_field :contact_email %>
+  </div>
 
-	<div>
-		<%= f.label :slack_id %>
-		<%= f.text_field :slack_id %>
-	</div>
+  <div>
+    <%= f.label :slack_id %>
+    <%= f.text_field :slack_id %>
+  </div>
 
-	<div>
-		<%= f.label :fb %>
-		<%= f.text_field :fb %>
-	</div>
+  <div>
+    <%= f.label :fb %>
+    <%= f.text_field :fb %>
+  </div>
 
-	<div>
-		<%= f.label :linkedin%>
-		<%= f.text_field :linkedin %>
-	</div>
+  <div>
+    <%= f.label :linkedin%>
+    <%= f.text_field :linkedin %>
+  </div>
 
-	<div>
-		<%= f.label :twitter %>
-		<%= f.text_field :twitter %>
-	</div> 
+  <div>
+    <%= f.label :twitter %>
+    <%= f.text_field :twitter %>
+  </div>
 
-	<div>
-		<%= f.label :github %>
-		<%= f.text_field :github %>
-	</div>
+  <div>
+    <%= f.label :github %>
+    <%= f.text_field :github %>
+  </div>
 
-	<div>
-		<%= f.label :projects_link %>
-		<%= f.text_area :projects_link %>
-	</div>
+  <div>
+    <%= f.label :projects_link %>
+    <%= f.text_area :projects_link %>
+  </div>
 
-	<div>
-		<%= f.label :description %>
-		<%= f.text_area :description  %>
-	</div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description  %>
+  </div>
 
-	<h2>Your login email is <%= current_user.login_email %></h2>
+  <h2>Your login email is <%= current_user.login_email %></h2>
 
-	<div>
+  <div>
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>

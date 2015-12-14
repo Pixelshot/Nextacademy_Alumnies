@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include ApplicationHelper
   def authenticate_user!
-  	unless user_logged_in?
-  		redirect_to login_path
-  		flash[:warning] = "please login"
-  	end
+    unless user_logged_in?
+      redirect_to login_path
+      flash[:warning] = "please login"
+    end
   end
 
 end

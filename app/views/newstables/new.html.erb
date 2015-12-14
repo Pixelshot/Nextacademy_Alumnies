@@ -1,23 +1,23 @@
 <h1>Create your newsfeed here!</h1>
 
 <%= form_for :newstable, html: {multipart: true} do |t| %>
-	<div>
-		<label>Title:</label>
-		<%= t.text_field :title %>
-	</div>
+  <div>
+    <label>Title:</label>
+    <%= t.text_field :title %>
+  </div>
 
-	<div>
-		<label>Content:</label>
-		<%= t.text_area :body %>
-	</div>
+  <div>
+    <label>Content:</label>
+    <%= t.text_area :body %>
+  </div>
 
-	<div>
-		<label>Image:</label>
-		<%= t.file_field :images, multiple: true %>
-	</div>
+  <div>
+    <label>Image:</label>
+    <%= t.file_field :images, multiple: true %>
+  </div>
 
-	<div>
-		<%= t.submit "Create Newsfeed" %>
-	</div>
+  <div>
+    <%= t.submit "Create Newsfeed" %>
+  </div>
 
 <% end %>
