@@ -1,14 +1,14 @@
 <h1>Edit your post!</h1>
 
 <%= form_for(@testimonial) do |t| %>
-	
-	<div>
-		<%= t.label :text %>
-		<%= t.text_area :text %>
-	</div>
 
-	<span>
-		<%= t.submit "Edit" %>
-	</span> 
+  <div>
+    <%= t.label :text %>
+    <%= t.text_area :text %>
+  </div>
+
+  <span>
+    <%= t.submit "Edit" %>
+  </span>
 
 <% end %>

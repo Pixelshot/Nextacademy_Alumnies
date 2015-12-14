@@ -1,15 +1,15 @@
 <h1>New newsfeed</h1>
 
 <h1>
-	<%= @newstables.title %>
+  <%= @newstables.title %>
 </h1>
 
 <p>
-	<%= @newstables.body %>
+  <%= @newstables.body %>
 </p>
 
 <div>
-	<% @newstables.images.each do |image| %>
+  <% @newstables.images.each do |image| %>
   <%= image_tag image.url.to_s if image.url.present? %>
   <% end %>
 </div>

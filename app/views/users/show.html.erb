@@ -1,56 +1,56 @@
 <table class="table">
 <thead>
 
-<li><% if current_user.id == @user.id%><%= link_to "Edit Profile", edit_user_path%><%end%></li> 
+<li><% if current_user.id == @user.id%><%= link_to "Edit Profile", edit_user_path%><%end%></li>
 
-	<tr>
-		<th>Name</th>
-		<th>Status</th>
-		<th>Batch</th>
-		<th>Email</th>
-		<th>Slack ID</th>
-		<th>Facebook</th>
-		<th>Twitter</th>
-		<th>Linkedin</th>
-		<th>Projects</th>
-		<th>About Me</th>
-	</tr>
+  <tr>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Batch</th>
+    <th>Email</th>
+    <th>Slack ID</th>
+    <th>Facebook</th>
+    <th>Twitter</th>
+    <th>Linkedin</th>
+    <th>Projects</th>
+    <th>About Me</th>
+  </tr>
 </thead>
 
 <tbody>
-	<tr>
-		<td><%= @user.username %></td>
-		<td><%= @user.status %></td>
-		<td><%= @user.batch_month %>, <%= @user.batch_year %></td>
-		<td><%= @user.contact_email %></td>
-		<td><%= @user.slack_id %></td>
-		<td><%= @user.fb %></td>
-		<td><%= @user.twitter %></td>
-		<td><%= @user.linkedin %></td>
-		<td><%= @user.projects_link %></td>
-		<td><%= @user.description %></td>
-	</tr>
+  <tr>
+    <td><%= @user.username %></td>
+    <td><%= @user.status %></td>
+    <td><%= @user.batch_month %>, <%= @user.batch_year %></td>
+    <td><%= @user.contact_email %></td>
+    <td><%= @user.slack_id %></td>
+    <td><%= @user.fb %></td>
+    <td><%= @user.twitter %></td>
+    <td><%= @user.linkedin %></td>
+    <td><%= @user.projects_link %></td>
+    <td><%= @user.description %></td>
+  </tr>
 </tbody>
 </table>
-	
-	<h1> Testimonial </h1>
+
+  <h1> Testimonial </h1>
 
 <% unless current_user == @user %>
-	<%= form_for :testimonial, url: user_testimonials_path(@user.id) do |f| %>
-			<div>
-				<%= f.label :text %>
-				<%= f.text_area :text  %>
-			</div>
-	  	<span>
-	  		<%= f.submit "Submit"%>
-	  	</span>
-  	<% end %>
+  <%= form_for :testimonial, url: user_testimonials_path(@user.id) do |f| %>
+      <div>
+        <%= f.label :text %>
+        <%= f.text_area :text  %>
+      </div>
+      <span>
+        <%= f.submit "Submit"%>
+      </span>
+    <% end %>
 <% end %>
 
 <% @user_testimonials.each do |test| %>
-	<p><%= test.text %> | <%= User.find(test.poster_id).username %>
-		<% unless current_user == @user%>
-			<span><%= link_to "Delete", test, method: :delete %></span></p>
-			<span><%= link_to "Edit", edit_testimonial_path(test.id) %></span></p>
-			<% end %>
+  <p><%= test.text %> | <%= User.find(test.poster_id).username %>
+    <% unless current_user == @user%>
+      <span><%= link_to "Delete", test, method: :delete %></span></p>
+      <span><%= link_to "Edit", edit_testimonial_path(test.id) %></span></p>
+      <% end %>
 <% end %>
