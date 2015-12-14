@@ -1,20 +1,27 @@
-	<h1>Please Login</h1>
 
-	<%= form_for :session do |t| %>
+<section class="form-login">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+          <h1>Please Login</h1>
 
-	<div>
-	<label>Email:</label>
-	<%= t.email_field :email %>
-	</div>	
+          <%= form_for :session do |t| %>
 
-	<div>
-	<label>Password:</label>
-	<%= t.password_field :password %>
-	</div>	
-	<br>
+          <div>
+            <label>Email:</label>
+            <%= t.email_field :email %>
+          </div>
 
-	<div>
-	<%= t.submit "Login!" %>
-	</div>
+          <div>
+            <label>Password:</label>
+            <%= t.password_field :password %>
+          </div>
+          <br>
 
-	<% end %>
+          <div>
+            <%= t.submit "Login!" %>
+            <% end %>
+          <div>
+        </div>
+      </div>
+</section>

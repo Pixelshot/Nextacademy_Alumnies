@@ -12,4 +12,5 @@ class NotifyMailer < ApplicationMailer
 		@password = password
 		mail(to: @user.login_email, subject: "Password reset for Next-Academy Alumnies Website")
 	end
+
 end

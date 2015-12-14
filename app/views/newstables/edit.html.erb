@@ -1,23 +1,23 @@
 <h1>Edit your post!</h1>
 
-<%= form_for @newstables, html: {multipart: true} do |t| %>
-	<div>
-		<label>Title:</label>
-		<%= t.text_field :title %>
-	</div>
+<%= form_for :newstable, html: {multipart: true} do |t| %>
+  <div>
+    <label>Title:</label>
+    <%= t.text_field :title %>
+  </div>
 
-	<div>
-		<label>Content:</label>
-		<%= t.text_area :body %>
-	</div>
+  <div>
+    <label>Content:</label>
+    <%= t.text_area :body %>
+  </div>
 
-	<div>
-		<label>Image:</label>
-		<%= t.file_field :images, multiple: true %>
-	</div>
+  <div>
+    <label>Image:</label>
+    <%= t.file_field :images, multiple: true %>
+  </div>
 
-	<div>
-		<%= t.submit "Edit Listing" %>
-	</div>
+  <div>
+    <%= t.submit "Edit Listing" %>
+  </div>
 
 <% end %>

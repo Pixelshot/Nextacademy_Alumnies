@@ -73,6 +73,7 @@ html, body {
 body {
     margin: 0;
     font-family: 'Nunito', sans-serif;
+    background-size: 1440px 800px;
 }
 
 /*
@@ -514,67 +515,16 @@ Buttons
 /* ==========================================================================
 Navigation
 ========================================================================== */
-/*.nav-toggle {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    z-index: 999999;
-    padding: 10px 35px 16px 0px;
-    cursor: pointer;
-}
-.nav-toggle:focus {
-    outline: none;
-}
-.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 35px;
-    height: 5px;
-    border-radius: 1px;
-    background: #fff;
-    cursor: pointer;
-}
-.nav-toggle span:before {
-    top: -10px
-}
-.nav-toggle span:after {
-    bottom: -10px
-}
-.nav-toggle span, .nav-toggle span:before, .nav-toggle span:after {
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-.nav-toggle.active span {
-    background-color: transparent
-}
-.nav-toggle.active span:before, .nav-toggle.active span:after {
-    top: 0
-}
-.nav-toggle.active span:before {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-.nav-toggle.active span:after {
-    top: 10px;
-    -webkit-transform: translateY(-10px) rotate(-45deg);
-    -ms-transform: translateY(-10px) rotate(-45deg);
-    transform: translateY(-10px) rotate(-45deg);
-}
-.navicon {
-    position: relative;
-    height: 26px;
-}
-.navicon p {
-    margin: 1px 50px 0 0
-}
-.navicon-fixed {
+
+.stick-top {
     position: fixed;
-    top: 59px;
-    right: 143px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background: transparent; 
+    border: transparent;
 }
-*/
+
 /* ==========================================================================
 Hero
 ========================================================================== */
@@ -659,7 +609,7 @@ Features Slider
 .features-bg {
     position: relative;
     min-height: 400px;
-    background: url('../assets/features-intro-01.jpg') no-repeat center center;
+    background: url('../assets/teamwork_0102.jpg') no-repeat center center;
     background-size: cover;
 }
 .features-img {
@@ -1091,4 +1041,13 @@ Waypoints
 .delay-1s {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
+}
+
+/*==============================
+Login
+==============================*/
+
+.form-login {
+    margin:50px 0px; padding:0px;
+
 }
