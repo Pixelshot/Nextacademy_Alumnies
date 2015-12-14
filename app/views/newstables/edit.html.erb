@@ -1,6 +1,6 @@
 <h1>Edit your post!</h1>
 
-<%= form_for :newstable, html: {multipart: true} do |t| %>
+<%= form_for @newstables, html: {multipart: true} do |t| %>
 	<div>
 		<label>Title:</label>
 		<%= t.text_field :title %>

@@ -12,6 +12,9 @@ resources :sessions, only: [:new]
 resources :newstables, only: [:index, :new, :show, :edit, :destroy]
 post '/newstables/new', to: "newstables#create"
 post "/newstables/:id/edit", to: 'newstables#update'
+
+get '/admin', to: "admin#index"
+get '/admin/:id/reset', to: "admin#reset", as: "user_reset"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
