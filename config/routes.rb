@@ -17,8 +17,15 @@ post '/testimonials/:id/edit', to: 'testimonials#update'
 post '/newstables/new', to: "newstables#create"
 post "/newstables/:id/edit", to: 'newstables#update'
 
-get '/admin', to: "admin#index"
+get '/admin', to: "admin#index", as: "admin"
 get '/admin/:id/reset', to: "admin#reset", as: "user_reset"
+get '/admin/filter', to: "admin#filter"
+get '/admin/new', to: "admin#new", as: "new_user"
+post '/admin/new', to: "admin#createuser"
+get '/admin/:id/edit', to: "admin#edit", as: "user_edit"
+post '/admin/:id/edit', to: "admin#update"
+delete 'admin/:id', to: "admin#delete", as: "user_delete"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,46 +1,77 @@
+<br>
+<br>
+
 <h1>This is Admin pages</h1>
 
-  <p>
+<br>
+  <%= link_to "Create new user", new_user_path %>
+<br>
 
+<%= form_for :filter, method: :get, url: "/admin/filter"  do |t| %>
 
-  </p>
+  <%= t.label "Batch year:" %>
+  <%= t.text_field :batch_year %>
 
-    <div class="table-responsive">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th>Status</th>
-            <th>Username</th>
-            <th>Login Email</th>
-            <th>Batch Year/ Month</th>
-            <th>Password Reset</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @user.each do |t| %>
-            <tr>
-              <td>
-                <% if t.admin == 1 %>
-                  <text> Mentor </text>
-                <% else  %>
-                  <text> Alumnies </text>
-                <% end %>
-              </td> 
-              <td>
-                <%= link_to "#{t.username}", user_path(t.id) %>
-              </td> 
-              <td>
-                <%= t.login_email %>
-              </td>
-              <td>
-                <%= t.batch_year%> / <%= t.batch_month %>
-              </td>
-              <td>
-                <%= link_to "Reset", user_reset_path(t.id) %>
-              </td> 
-            </tr>
-    
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+  <br>
+
+  <%= t.label "Batch month:" %>
+  <%= t.text_field :batch_month %>
+
+  <br>
+
+  <%= t.label "Username:" %>
+  <%= t.text_field :username %>
+
+  <br>
+
+  <%= t.submit "Search"%>
+
+<% end %>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Username</th>
+        <th>Login Email</th>
+        <th>Batch Year/ Month</th>
+        <th>Password Reset</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user.each do |t| %>
+        <tr>
+          <td>
+            <% if t.role == 1 %>
+              <text> Mentor </text>
+            <% else  %>
+              <text> Alumnies </text>
+            <% end %>
+          </td> 
+          <td>
+            <%= link_to "#{t.username}", user_path(t.id) %>
+          </td> 
+          <td>
+            <%= t.login_email %>
+          </td>
+          <td>
+            <%= t.batch_year%> / <%= t.batch_month %>
+          </td>
+          <td>
+            <%= link_to "Reset", user_reset_path(t.id) %>
+          </td>
+          <td>
+            <%= link_to "Edit", user_edit_path(t.id) %>
+          </td>
+          <td>
+            <%= link_to "Delete", user_delete_path(t.id), method: :delete %>
+          </td>
+        </tr>
+
+      <% end %>
+    </tbody>
+  </table>
+</div>

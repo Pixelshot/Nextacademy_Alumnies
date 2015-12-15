@@ -8,4 +8,11 @@ module ApplicationHelper
     current_user.present?
   end
 
+    def check_admin?
+    unless User.find(session[:user_id]).role == 2   
+      redirect_to root_path
+      flash[:warning] = "Access Denied"
+    end
+  end
+
 end

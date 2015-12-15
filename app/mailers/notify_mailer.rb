@@ -13,4 +13,9 @@ class NotifyMailer < ApplicationMailer
     mail(to: @user.login_email, subject: "Password reset for Next-Academy Alumnies Website")
   end
 
+  def account_create_email(user, password)
+    @user = user
+    @password = password
+    mail(to: @user.login_email, subject: "Account has been created for Next-Academy Alumnies")
+  end
 end

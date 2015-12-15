@@ -53,7 +53,7 @@ before_action :check_correct_user, only: [:update, :edit, :destroy]
     end
 
     def check_correct_user
-      unless user_admin? || @newstables.user == current_user
+      unless check_admin? || @newstables.user == current_user
         flash[:warning] = "Unauthorized"
         redirect_to newstables_path
       end

@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 before_action :set_user, only: [:show, :edit, :update]
 
   def index
-    @mentors = User.where(admin: 1)
-    @students = User.where(admin: 0)
+    @mentors = User.where(role: 1)
+    @students = User.where(role: 0)
   end
 
   def show
@@ -24,7 +24,7 @@ before_action :set_user, only: [:show, :edit, :update]
 
   private
   def user_params
-    params.require(:user).permit(:username, :contact_email, :login_email, :password, :fb, :linkedin, :twitter, :github, :batch_month, :batch_year, :projects_link, :description, :avatar, :status, :slack_id, :admin)
+    params.require(:user).permit(:username, :contact_email, :login_email, :password, :fb, :linkedin, :twitter, :github, :batch_month, :batch_year, :projects_link, :description, :avatar, :status, :slack_id, :role)
   end
 
   def set_user
