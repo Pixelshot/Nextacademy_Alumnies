@@ -6,12 +6,12 @@
 <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 <%= csrf_meta_tags %>
 
-<%= render 'shared/navbar' unless params[:controller] == "statics" && params[:action] == "index"%>
 </head>
-<body>
-<div>
 
-<%= yield %>
+<body <%= 'id="page-top" class="index"' if params["controller"] == "statics" && params["action"] == "index" %> >
+	<div>
 
-</body>
+	<%= yield %>
+
+	</body>
 </html>

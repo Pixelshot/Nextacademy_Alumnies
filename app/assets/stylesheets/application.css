@@ -12,8 +12,10 @@
  *
  *= require animate
  *= require bootstrap.min
+ *= require agency
  *= require_tree .
  *= require_self
+
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
