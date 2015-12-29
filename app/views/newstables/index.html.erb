@@ -1,40 +1,33 @@
 <h1>This is newsfeed index</h1>
 
   <% @newstable.each_with_index do | t, index| %>
-<table>
-  <thead>
-    <tr>
-      <th>
-        <%= "#{index + 1}. " %>
-      </th>
-
-      <th>
-        <%= link_to t do %>
-        <%= "#{t.title}" %>
-        <% end %>
-      </th>
-
-      <th>
-        News Created by: <%= link_to t.user.username, user_path(t.user) %>
-      </th>
-    </tr>
+    <div>
+      <tr>
+        <div width: 33%>
+          <th>
+            <%= link_to t do %>
+            <%= "#{t.title}" %>
+            <% end %>
+          </th>
+          <th>
+            News Created by: <%= link_to t.user.username, user_path(t.user) %>
+          </th>
+        </div>  
+      </tr>
+    </div>
   </thead>
   <tbody>
     <tr>
-      <td>
       <% t.images.each do |image| %>
-      <%= image_tag image.url.to_s if image.url.present? %>
+      <%= image_tag image.middle.to_s if image.url.present? %>
       <% end %>
-      </td>
     </tr>
-  </tbody>
-</table>
 
 
 
 <% end %>
 
-<br>.
+<br>
 
 <div>
   <%= link_to "Create newsfeed", new_newstable_path %>

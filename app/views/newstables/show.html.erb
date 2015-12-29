@@ -14,7 +14,7 @@
 </p>
 
 
-<% if user_admin? || @newstables.user == current_user %>
+<% if check_admin? || @newstables.user == current_user %>
 <div>
   <%=  link_to "Delete this post", newstable_path(@newstables), method: :delete %>
 </div>

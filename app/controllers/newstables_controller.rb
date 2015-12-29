@@ -2,7 +2,7 @@ class NewstablesController < ApplicationController
 before_action :set_newstable, only: [:show, :edit, :update, :destroy]
 before_action :check_correct_user, only: [:update, :edit, :destroy]
   def index
-    @newstable = Newstable.order(updated_at: :desc)
+    @newstable = Newstable.paginate(:page => params[:page], :per_page => 9).order(updated_at: :desc)
   end
 
   def new

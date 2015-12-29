@@ -4,4 +4,7 @@ class Newstable < ActiveRecord::Base
 
   belongs_to :user
   mount_uploaders :images, ImageUploader
+  self.per_page = 9
+
+
 end
